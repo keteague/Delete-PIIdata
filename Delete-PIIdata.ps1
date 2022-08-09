@@ -17,7 +17,7 @@
 
 $extensions = "*.doc*", "*.xls*", "*.ppt*", "*.pdf", "*.csv", "*.txt"
 $tempdirs = "$env:SystemDrive\Windows\Temp", "$env:TEMP"
-$profiles = (Get-ChildItem "$env:SystemDrive\Users").FullName -match "[^Public]"
+$profiles = (Get-ChildItem "$env:SystemDrive\Users").FullName -match "^(?!.*Public)"
 $paths = $tempdirs, $profiles
 
 ForEach ($path in $paths) {
