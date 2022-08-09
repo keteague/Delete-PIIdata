@@ -15,7 +15,7 @@
     https://github.com/keteague/Delete-PIIdata
 #>
 
-$extensions = "*.doc*", "*.xls*", "*.ppt*", "*.pdf", "*.csv", "*.txt"
+$extensions = "*.doc", "*.docx", "*.xls", "*.xlsx", "*.ppt", "*.pptx", "*.pdf", "*.csv", "*.txt"
 $tempdirs = "$env:SystemDrive\Windows\Temp", "$env:TEMP"
 $profiles = (Get-ChildItem "$env:SystemDrive\Users").FullName -match "^(?!.*Public)"
 $paths = $tempdirs, $profiles
